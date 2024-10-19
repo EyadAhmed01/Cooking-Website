@@ -167,7 +167,7 @@ function putPic(dummy,x) {
             <div id="${data.meals[x].idMeal}" class="inner border-0 rounded-2">
                 <div class="image-container border-0 rounded-2">
                     <img src="${data.meals[x].strMealThumb}"  alt="Sushi" class="img-fluid">
-                   <a href="html/info.html" > <div class="overlay border-0 rounded-2">
+                   <a href="./html/info.html" > <div class="overlay border-0 rounded-2">
                         <div class="info  fs-2">${data.meals[x].strMeal}</div>
                     </div></a>
                 </div>
@@ -181,7 +181,7 @@ function putPic(dummy,x) {
             <div id="${data.meals[x].idMeal}" class="inner border-0 rounded-2">
                 <div  class="image-container border-0 rounded-2">
                     <img src="${data.meals[x].strMealThumb}" alt="Sushi" class="img-fluid">
-                    <a href="html/info.html" <div  class="overlay border-0 rounded-2">
+                    <a href="./html/info.html" <div  class="overlay border-0 rounded-2">
                         <div class="info  fs-2">${data.meals[x].strMeal}</div>
                     </div></a>
                 </div>
