@@ -109,7 +109,7 @@ if(inputSearch!=null)
 }
 
 async function getMealsByName(test) {
-    res = await fetch(`https:www.themealdb.com/api/json/v1/1/search.php?s=${test}`);
+    res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${test}`);
     data = await res.json();
     
     
