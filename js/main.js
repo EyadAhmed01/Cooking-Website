@@ -82,7 +82,7 @@ async function getMeal() {
         res = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
         data = await res.json();
        
-        putPic(input,0);
+        putPic2(input,0);
         getId();
 
 
@@ -160,6 +160,39 @@ getId();
 // both
 
 function putPic(dummy,x) {
+
+    if(inLoop == 1){
+
+        dummy.innerHTML += (`<div class="col-lg-3 col-md-4 col-12 overflow-hidden rounded-4">
+            <div id="${data.meals[x].idMeal}" class="inner border-0 rounded-2">
+                <div class="image-container border-0 rounded-2">
+                    <img src="${data.meals[x].strMealThumb}"  alt="Sushi" class="img-fluid">
+                   <a href="../html/info.html" > <div class="overlay border-0 rounded-2">
+                        <div class="info  fs-2">${data.meals[x].strMeal}</div>
+                    </div></a>
+                </div>
+            </div>
+    </div>`)
+    }
+    else {
+        dummy.innerHTML = "";
+        inLoop = 1;
+        dummy.innerHTML += (`<div class="col-lg-3 col-md-4 col-12 overflow-hidden rounded-4">
+            <div id="${data.meals[x].idMeal}" class="inner border-0 rounded-2">
+                <div  class="image-container border-0 rounded-2">
+                    <img src="${data.meals[x].strMealThumb}" alt="Sushi" class="img-fluid">
+                    <a href="../html/info.html" <div  class="overlay border-0 rounded-2">
+                        <div class="info  fs-2">${data.meals[x].strMeal}</div>
+                    </div></a>
+                </div>
+            </div>
+    </div>`)
+    }
+   
+
+
+}
+function putPic2(dummy,x) {
 
     if(inLoop == 1){
 
